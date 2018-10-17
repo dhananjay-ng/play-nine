@@ -21,7 +21,7 @@ class App extends Component {
         <Button increment={100} onClickFunction={this.incrementCounter} />
         <Button increment={1000} onClickFunction={this.incrementCounter} />
         <Result counter={this.state.counter} />
-        <header className="App-header">
+      {/*   <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit file <code>src/App.js</code> and save to reload.
@@ -34,7 +34,7 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </header> */}
       </div>
     );
   }

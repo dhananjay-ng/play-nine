@@ -7,9 +7,7 @@ class Button extends React.Component{
 
     render(){
         return (
-            <div className="Button">
               <button onClick={this.handleClick}>+{this.props.increment}</button>
-            </div>
           );
     }   
   }
