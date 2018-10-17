@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import Result from './components/Result';
 
 class App extends Component {
+  
+  state = { counter : 0 };
+
+  incrementCounter=(increment)=>{
+    this.setState((prevState) => ({
+        counter : prevState.counter + increment
+    }));
+};
   render() {
     return (
-      <div className="App">
+      <div className="App">      
+        <Button increment={1} onClickFunction={this.incrementCounter} />
+        <Button increment={10} onClickFunction={this.incrementCounter} />
+        <Button increment={100} onClickFunction={this.incrementCounter} />
+        <Button increment={1000} onClickFunction={this.incrementCounter} />
+        <Result counter={this.state.counter} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Edit file <code>src/App.js</code> and save to reload.
           </p>
           <a
             className="App-link"
