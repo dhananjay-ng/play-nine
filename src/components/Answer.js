@@ -5,10 +5,12 @@ import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
 const Answer = (props) => {
     return(
-        <div className="col-5">
-                      <span>1</span>
-                      <span>2</span>
-
+       
+        <div className="col-3">
+        { props.selectedNumbers.map((number,i ) =>
+            <span key={i} onClick={()=>{props.unselectNumber(number)}}>{number}</span>
+        )
+        }
         </div>
 
     );

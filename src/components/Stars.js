@@ -4,10 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const Stars = (props) => {
-    const numnberOfStars= 1 + Math.floor(Math.random()*9);
     let stars = [];
-    for(let i=0 ; i< numnberOfStars; i++){
-        stars.push(<FontAwesomeIcon icon="star"/>);
+    for(let i=0 ; i< props.numnberOfStars; i++){
+        stars.push(<FontAwesomeIcon key={i} icon="star"/>);
     }
     return(
         <div className="col-5">
