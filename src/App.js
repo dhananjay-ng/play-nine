@@ -5,6 +5,7 @@ import Button from './components/Button';
 import Result from './components/Result';
 import CardList from './components/CardList';
 import Form from './components/Form';
+import Game from './components/Game';
 
 class App extends Component {
   
@@ -24,8 +25,8 @@ addNewCard = (cardInfo)=>{
 }
   render() {
     return (
-      <div className="App">      
-        <Button increment={1} onClickFunction={this.incrementCounter} />
+      <div className="container ">      
+        {/*  <Button increment={1} onClickFunction={this.incrementCounter} />
         <Button increment={10} onClickFunction={this.incrementCounter} />
         <Button increment={100} onClickFunction={this.incrementCounter} />
         <Button increment={1000} onClickFunction={this.incrementCounter} />
@@ -33,7 +34,7 @@ addNewCard = (cardInfo)=>{
      
         <Form onSubmit={this.addNewCard}/>
         <CardList data={this.state.cards}/>
-      {/*   <header className="App-header">
+       <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit file <code>src/App.js</code> and save to reload.
@@ -47,6 +48,9 @@ addNewCard = (cardInfo)=>{
             Learn React
           </a>
         </header> */}
+
+        <Game/>
+       
       </div>
     );
   }
