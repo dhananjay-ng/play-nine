@@ -4,16 +4,24 @@ import './App.css';
 import Button from './components/Button';
 import Result from './components/Result';
 import CardList from './components/CardList';
+import Form from './components/Form';
 
 class App extends Component {
   
-  state = { counter : 0 };
+  state = { counter : 0 ,
+            cards : []
+          };
 
   incrementCounter=(increment)=>{
     this.setState((prevState) => ({
         counter : prevState.counter + increment
     }));
 };
+addNewCard = (cardInfo)=>{
+   this.setState( prevState=>({
+     cards : prevState.cards.concat(cardInfo)
+   }));
+}
   render() {
     return (
       <div className="App">      
@@ -22,7 +30,9 @@ class App extends Component {
         <Button increment={100} onClickFunction={this.incrementCounter} />
         <Button increment={1000} onClickFunction={this.incrementCounter} />
         <Result counter={this.state.counter} />
-        <CardList/>
+     
+        <Form onSubmit={this.addNewCard}/>
+        <CardList data={this.state.cards}/>
       {/*   <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

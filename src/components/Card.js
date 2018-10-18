@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 const Card = (props) => {
     return(
         <div style={{margin: '1em'}}>
-            <img width="75" src="http://placehold.it/75"/>
+            <img width="75" src={props.avatar_url}/>
             <div style={{display: 'inline-block', marginLeft: 10}}>
             <div >
-                Name Here ..
+              {props.name}
             </div>
             <div>
-                Company Name Here ....
+                {props.company}
             </div>
             </div>
         </div>
