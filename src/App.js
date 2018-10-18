@@ -4,7 +4,6 @@ import './App.css';
 import Button from './components/Button';
 import Result from './components/Result';
 import CardList from './components/CardList';
-import Card from './components/Card';
 
 class App extends Component {
   
@@ -23,7 +22,7 @@ class App extends Component {
         <Button increment={100} onClickFunction={this.incrementCounter} />
         <Button increment={1000} onClickFunction={this.incrementCounter} />
         <Result counter={this.state.counter} />
-        <Card/>
+        <CardList/>
       {/*   <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
